@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_azure_db = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.txt_azure_user = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_azure_ds = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_salvar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -63,13 +63,22 @@
             this.groupBox1.Text = "Conexão Azure";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::frigobom_c.Properties.Resources.icon_azure_2x;
+            this.pictureBox1.Location = new System.Drawing.Point(398, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // txt_azure_db
             // 
             this.txt_azure_db.Location = new System.Drawing.Point(83, 132);
             this.txt_azure_db.Name = "txt_azure_db";
             this.txt_azure_db.Size = new System.Drawing.Size(287, 20);
             this.txt_azure_db.TabIndex = 13;
-            this.txt_azure_db.Text = "frigobom";
             // 
             // label5
             // 
@@ -96,7 +105,6 @@
             this.txt_azure_pass.PasswordChar = '#';
             this.txt_azure_pass.Size = new System.Drawing.Size(287, 20);
             this.txt_azure_pass.TabIndex = 10;
-            this.txt_azure_pass.Text = "Frigobom123!";
             // 
             // label3
             // 
@@ -113,7 +121,6 @@
             this.txt_azure_user.Name = "txt_azure_user";
             this.txt_azure_user.Size = new System.Drawing.Size(287, 20);
             this.txt_azure_user.TabIndex = 8;
-            this.txt_azure_user.Text = "tadeu";
             // 
             // label2
             // 
@@ -130,17 +137,6 @@
             this.txt_azure_ds.Name = "txt_azure_ds";
             this.txt_azure_ds.Size = new System.Drawing.Size(287, 20);
             this.txt_azure_ds.TabIndex = 6;
-            this.txt_azure_ds.Text = "tadeu.database.windows.net";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::frigobom_c.Properties.Resources.icon_azure_2x;
-            this.pictureBox1.Location = new System.Drawing.Point(398, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // bt_salvar
             // 
@@ -148,7 +144,7 @@
             this.bt_salvar.Name = "bt_salvar";
             this.bt_salvar.Size = new System.Drawing.Size(115, 23);
             this.bt_salvar.TabIndex = 16;
-            this.bt_salvar.Text = "Salvar e Sair";
+            this.bt_salvar.Text = "Salvar";
             this.bt_salvar.UseVisualStyleBackColor = true;
             this.bt_salvar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -161,7 +157,7 @@
             this.button1.Text = "Testar Conexão";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // frm_con_azure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -169,8 +165,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.bt_salvar);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
+            this.Name = "frm_con_azure";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.frm_con_azure_Load);
+            this.Click += new System.EventHandler(this.frm_con_azure_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

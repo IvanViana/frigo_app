@@ -60,6 +60,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.txt_azure_ds = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_azure_user = new System.Windows.Forms.TextBox();
@@ -90,7 +91,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 10000;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // bt_azure
@@ -318,6 +319,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(63, 20);
             this.dateTimePicker1.TabIndex = 27;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(327, 293);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // txt_azure_ds
             // 
             this.txt_azure_ds.Location = new System.Drawing.Point(83, 22);
@@ -420,6 +431,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 444);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.bindingNavigator1);
@@ -481,6 +493,7 @@
         private System.Windows.Forms.ToolStripMenuItem conexãoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem firebirdToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem azureToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txt_azure_ds;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_azure_user;

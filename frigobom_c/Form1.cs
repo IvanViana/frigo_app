@@ -17,9 +17,6 @@ namespace frigobom_c
 {
     public partial class Form1 : Form
     {
-
-
-
         private string arq_migracao;
 
         private string strConn ;
@@ -37,7 +34,10 @@ namespace frigobom_c
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            exibir_azure();
+            // exibir_azure();
+            timer1.Enabled = false;
+            button2.Text = "sem timer";
+            MessageBox.Show("Conectado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
 
@@ -398,7 +398,7 @@ namespace frigobom_c
                 conn.Open();
                 if (conn.State == ConnectionState.Open)
                 {
-                   // MessageBox.Show("Conectado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  // MessageBox.Show("Conectado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     conn.Close();
                     return true;
                 }
@@ -412,6 +412,21 @@ namespace frigobom_c
 
             return false;
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+
+            if (timer1.Enabled == true){
+                timer1.Enabled = false;
+                button2.Text = "sem timer";
+            }
+            else {
+                timer1.Enabled = true;
+                button2.Text = "com timer";
+            }
+         
         }
     }
 }
